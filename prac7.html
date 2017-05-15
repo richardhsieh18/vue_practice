@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>0 Hello World</title>
+    </head>
+    <body>
+
+        <div id="app">
+            <div v-bind:style="myStyle">123</div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.4/vue.js"></script>
+        <script>
+            new Vue({
+                el:'#app',
+                data:{
+                   myStyle: {
+                    color: 'red',
+                    fontSize: '45px'
+                  }
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+        <h1 class="error">{{ score }}分</h1>
+
+        <div v-show="score">
+          <p v-if="score >= 6">Vue is easy</p>
+          <p v-if="score >= 200"> Good Job</p>
+          <p v-else>not yet</p>
+        </div>
+        <p>你覺得vue.js簡單嗎？請輸入1~10分</p>
+        <input type="text" v-model="score">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+    <script>
+      new Vue({
+        el: '#app',
+        data: {
+          score: '0'
+        }
+      });
+    </script>
+  </body>
+</html>

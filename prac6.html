@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>prac6</title>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="(item, index) in items">
+        {{ parentMessage }} - {{ index }} - {{ item.message }}
+      </li>
+    </ul>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+  <script>
+  new Vue({
+    el: "#app",
+    data: {
+      parentMessage: '台北市',
+      items: [
+        { message: '中正區' },
+        { message: '中山區' },
+        { message: '大同區' }
+      ]
+    }
+  });
+  </script>
+</body>
+</html>

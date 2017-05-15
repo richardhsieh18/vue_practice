@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>3 click</title>
+    </head>
+    <body>
+        <div id="app">
+            <p>目前點擊次數{{count}}</p>
+            <input type="submit" value="立即送出" v-on:click="clickme">
+            <button v-on:click="handleIt('uh')">I say uh</button>
+            <button v-on:click="handleIt('ah')">you say ah</button>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+        <script>
+          new Vue({
+            el: '#app',
+            data: {
+              count: 0
+            },
+            methods:{
+              clickme: function(){
+                this.count += 1;
+              },
+              handleIt: function(msg){
+                this.count += 1;
+                alert(msg);
+              }
+            }
+          });
+
+        </script>
+    </body>
+</html>
